@@ -20,3 +20,24 @@ PtrToEmployee searchEmployeeByName(PtrToConstEmployee ptr, int tableSize, char *
     }
     return NULL;
 }
+
+//search by phone number
+PtrToEmployee searchEmployeeByPhone(PtrToConstEmployee ptr, int tableSize, char * targetPhone){
+    const PtrToConstEmployee endPtr = ptr + tableSize;
+    for(; ptr < endPtr; ptr++)
+    {
+        if(strcmp(ptr->name,targetPhone) == 0) 
+            return (PtrToEmployee) ptr;
+    }
+    return NULL;
+}
+//Search by salary
+PtrToEmployee searchEmployeeBySalary(PtrToConstEmployee ptr, int tableSize, double targetSalary){
+    const PtrToConstEmployee endPtr = ptr + tableSize;
+    for(; ptr < endPtr; ptr++)  
+    {   
+        if(ptr->number == targetSalary) 
+            return (PtrToEmployee) ptr;
+    }
+     return NULL;
+}
