@@ -11,7 +11,7 @@ Employee EmployeeTable[] =
 };
 const int EmployeeTableEntries = sizeof(EmployeeTable)/sizeof(EmployeeTable[0]);
 
-void main(){
+/*void main(){
     printf("%d\n", sizeof(EmployeeTable));
     printf("%d\n", sizeof(EmployeeTable[0]));
     printf("%d\n", sizeof(EmployeeTableEntries));
@@ -19,4 +19,4 @@ void main(){
     printf("%d\n", sizeof(char*));  //I Have Intel 64 bit processor -> 8 bytes for address
     printf("%d\n", sizeof(char*));  //
     printf("%d\n", sizeof(double));
-}
+}*/
