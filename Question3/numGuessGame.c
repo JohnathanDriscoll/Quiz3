@@ -11,6 +11,11 @@ int main(void){
     time_t t;
     srand((unsigned) time(&t));
     int secretNum;
+    FILE *fp;
+
+    fp = fopen("saveMax.txt", "r+");
+    fscanf(fp, "%d", maxNum);
+    
 
     while (menuOpt < 4 && menuOpt){
         printf("Press 1 to play a game\nPress 2 to change the max number\nPress 3 to quit\n");
@@ -56,6 +61,8 @@ int main(void){
                 }
             }
             maxNum = atoi(input);
+            fp = fopen("saveMax.txt", "w+");
+            fprintf(fp, "%d", maxNum);
             printf("You have changed the max number to %d.\n", maxNum);
             goto skip;            
         }
