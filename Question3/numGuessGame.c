@@ -14,7 +14,7 @@ int main(void){
     FILE *fp;
 
     fp = fopen("saveMax.txt", "r+");
-    fscanf(fp, "%d", maxNum);
+    fscanf(fp, "%d", &maxNum);
     
 
     while (menuOpt < 4 && menuOpt){
